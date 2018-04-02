@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Solicitantes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @requesters.each do |requester| %>
+      <tr>
+        <td><%= requester.name %></td>
+        <td><%= link_to 'Show', requester %></td>
+        <td><%= link_to 'Edit', edit_requester_path(requester) %></td>
+        <td><%= link_to 'Destroy', requester, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Requester', new_requester_path %>

@@ -1,0 +1,151 @@
+<%= form_with(model: improvement, local: true) do |form| %>
+  <% if improvement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(improvement.errors.count, "error") %> prohibited this improvement from being saved:</h2>
+
+      <ul>
+      <% improvement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label "Número do Chamado" %>
+    <%= form.text_field :chamado, id: :improvement_chamado %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Descrição da Solicitação" %>
+    <%= form.text_area :solicitacao, id: :improvement_solicitacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Data Report" %>
+    <%= form.date_select :data_report, id: :improvement_data_report %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Data Aprovação REQ-010" %>
+    <%= form.date_select :data_aprov_req, id: :improvement_data_aprov_req %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Data de Envio ao Provedor" %>
+    <%= form.date_select :data_envio_provedor, id: :improvement_data_envio_provedor %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Horas Orçadas" %>
+    <%= form.number_field :horas_orca, id: :improvement_horas_orca %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Data Aprovação Orçamento" %>
+    <%= form.date_select :data_aprov_orca, id: :improvement_data_aprov_orca %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Data Envio Funcional para aprovação" %>
+    <%= form.date_select :data_envio_funci, id: :improvement_data_envio_funci %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Data Aprovação Funcional" %>
+    <%= form.date_select :data_aprov_funci, id: :improvement_data_aprov_funci %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Data Envio Técnica para aprovação" %>
+    <%= form.date_select :data_envio_tec, id: :improvement_data_envio_tec %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Data Aprovação Técnica" %>
+    <%= form.date_select :data_aprov_tec, id: :improvement_data_aprov_tec %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Data Fim Contrução" %>
+    <%= form.date_select :data_fim_constr, id: :improvement_data_fim_constr %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Data de teste de Aceite" %>
+    <%= form.date_select :data_teste_acei, id: :improvement_data_teste_acei %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Data de passagem a produção" %>
+    <%= form.date_select :data_prod, id: :improvement_data_prod %>
+  </div>
+
+  <div class="field">
+    <%= form.label "% de Avanço" %>
+    <%= form.number_field :avanco, id: :improvement_avanco %>
+  </div>
+
+
+  <div class="field">
+      <%= form.label 'Sistema' %>
+      <%= collection_select(:improvement, :system_id, System.all, :id, :name) %>
+      
+  </div>
+
+  <div class="field">
+    <%= form.label 'Módulo' %>
+    <%= collection_select(:improvement, :segment_id, Segment.all, :id, :name) %>
+    
+  </div>
+
+
+  <div class="field">
+    <%= form.label "Tipo" %>
+    <%= collection_select(:improvement, :type_id, Type.all, :id, :name) %>
+    
+  </div>
+
+  <div class="field">
+    <%= form.label "Prioridade" %>
+    <%= collection_select(:improvement, :priority_id, Priority.all, :id, :name) %>
+    
+  </div>
+
+  <div class="field">
+    <%= form.label "Diretoria" %>
+    <%= collection_select(:improvement, :director_id, Director.all, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Status" %>
+    <%= collection_select(:improvement, :status_id, Status.all, :id, :name) %>
+    
+  </div>
+
+  <div class="field">
+    <%= form.label "Provedor" %>
+    <%= collection_select(:improvement, :provider_id, Provider.all, :id, :name) %>
+
+  </div>
+
+  <div class="field">
+    <%= form.label "Área" %>
+    <%= collection_select(:improvement, :area_id, Area.all, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Solicitante" %>
+    <%= collection_select(:improvement, :requester_id, Requester.all, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Responsável ICT" %>
+    <%= collection_select(:improvement, :responsible_id, Responsible.all, :id, :name) %>
+    
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

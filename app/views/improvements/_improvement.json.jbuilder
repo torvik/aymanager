@@ -1,0 +1,2 @@
+json.extract! improvement, :id, :chamado, :solicitacao, :data_report, :data_aprov_req, :data_envio_provedor, :horas_orca, :data_aprov_orca, :data_envio_funci, :data_aprov_funci, :data_envio_tec, :data_aprov_tec, :data_fim_constr, :data_teste_acei, :data_prod, :avanco, :segment_id, :system_id, :type_id, :priority_id, :director_id, :status_id, :provider_id, :area_id, :requester_id, :responsible_id, :created_at, :updated_at
+json.url improvement_url(improvement, format: :json)

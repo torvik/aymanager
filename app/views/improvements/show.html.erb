@@ -1,0 +1,129 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Chamado:</strong>
+  <%= @improvement.chamado %>
+</p>
+
+<p>
+  <strong>Solicitacao:</strong>
+  <%= @improvement.solicitacao %>
+</p>
+
+<p>
+  <strong>Data report:</strong>
+  <%= @improvement.data_report.strftime("%d/%m/%Y") %>
+</p>
+
+<p>
+  <strong>Data aprov req:</strong>
+  <%= @improvement.data_aprov_req.strftime("%d/%m/%Y") %>
+</p>
+
+<p>
+  <strong>Data envio provedor:</strong>
+  <%= @improvement.data_envio_provedor.strftime("%d/%m/%Y") %>
+</p>
+
+<p>
+  <strong>Horas orca:</strong>
+  <%= @improvement.horas_orca %>
+</p>
+
+<p>
+  <strong>Data aprov orca:</strong>
+  <%= @improvement.data_aprov_orca.strftime("%d/%m/%Y") %>
+</p>
+
+<p>
+  <strong>Data envio funci:</strong>
+  <%= @improvement.data_envio_funci.strftime("%d/%m/%Y") %>
+</p>
+
+<p>
+  <strong>Data aprov funci:</strong>
+  <%= @improvement.data_aprov_funci.strftime("%d/%m/%Y") %>
+</p>
+
+<p>
+  <strong>Data envio tec:</strong>
+  <%= @improvement.data_envio_tec.strftime("%d/%m/%Y") %>
+</p>
+
+<p>
+  <strong>Data aprov tec:</strong>
+  <%= @improvement.data_aprov_tec.strftime("%d/%m/%Y") %>
+</p>
+
+<p>
+  <strong>Data fim constr:</strong>
+  <%= @improvement.data_fim_constr.strftime("%d/%m/%Y") %>
+</p>
+
+<p>
+  <strong>Data teste acei:</strong>
+  <%= @improvement.data_teste_acei.strftime("%d/%m/%Y") %>
+</p>
+
+<p>
+  <strong>Data prod:</strong>
+  <%= @improvement.data_prod.strftime("%d/%m/%Y") %>
+</p>
+
+<p>
+  <strong>Avanco:</strong>
+  <%= number_to_percentage(@improvement.avanco, precision: 0) %>
+</p>
+
+<p>
+  <strong>Segment:</strong>
+  <%= @improvement.segment.name %>
+</p>
+
+<p>
+  <strong>System:</strong>
+  <%= @improvement.system.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @improvement.type.name %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @improvement.priority.name %>
+</p>
+
+<p>
+  <strong>Director:</strong>
+  <%= @improvement.director.name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @improvement.status.name %>
+</p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @improvement.provider.name %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @improvement.area.name %>
+</p>
+
+<p>
+  <strong>Requester:</strong>
+  <%= @improvement.requester.name %>
+</p>
+
+<p>
+  <strong>Responsible:</strong>
+  <%= @improvement.responsible.name %>
+</p>
+
+<%= link_to 'Edit', edit_improvement_path(@improvement) %> |
+<%= link_to 'Back', improvements_path %>
