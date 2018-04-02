@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
- 
-
-  resources :improvements
+   resources :improvements
   resources :responsibles
   resources :requesters
   resources :areas

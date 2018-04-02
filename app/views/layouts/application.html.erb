@@ -9,36 +9,11 @@
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
+  
+      <div class="container-fluid">
+          <%= yield %>
+      </div>
 
-
-  <%= link_to  "EPT´s", improvements_path %> |
-
-  <%= link_to  "Diretoria", directors_path %> |
-
-  <%= link_to  "Área", areas_path %> |
-
-  <%= link_to  "Responsável ICT", responsibles_path %> |
-
-  <%= link_to  "Solicitante", requesters_path %> |
-
-  <%= link_to  "Provedor", providers_path %> |
-
-  <%= link_to  "Status", statuses_path %> |
-
-  <%= link_to  "Prioridades", priorities_path %> |
-
-  <%= link_to  "Tipos", types_path %> |
-
-  <%= link_to  "Sistemas", systems_path %> |
-
-  <%= link_to  "Módulos", segments_path %>
-
-
-  <br/>
-  <br/>
-
-    <hr>
-
-    <%= yield %>
   </body>
 </html>

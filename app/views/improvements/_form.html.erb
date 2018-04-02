@@ -1,3 +1,6 @@
+
+<div class"row"> 
+
 <%= form_with(model: improvement, local: true) do |form| %>
   <% if improvement.errors.any? %>
     <div id="error_explanation">
@@ -11,135 +14,135 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Número do Chamado" %>
-    <%= form.text_field :chamado, id: :improvement_chamado %>
+    <%= form.text_field :chamado, id: :improvement_chamado, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Descrição da Solicitação" %>
-    <%= form.text_area :solicitacao, id: :improvement_solicitacao %>
+    <%= form.text_area :solicitacao, id: :improvement_solicitacao, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Data Report" %>
-    <%= form.date_select :data_report, id: :improvement_data_report %>
+    <%= form.date_select :data_report, id: :improvement_data_report, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Data Aprovação REQ-010" %>
-    <%= form.date_select :data_aprov_req, id: :improvement_data_aprov_req %>
+    <%= form.date_select :data_aprov_req, id: :improvement_data_aprov_req, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Data de Envio ao Provedor" %>
-    <%= form.date_select :data_envio_provedor, id: :improvement_data_envio_provedor %>
+    <%= form.date_select :data_envio_provedor, id: :improvement_data_envio_provedor, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Horas Orçadas" %>
-    <%= form.number_field :horas_orca, id: :improvement_horas_orca %>
+    <%= form.number_field :horas_orca, id: :improvement_horas_orca, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Data Aprovação Orçamento" %>
-    <%= form.date_select :data_aprov_orca, id: :improvement_data_aprov_orca %>
+    <%= form.date_select :data_aprov_orca, id: :improvement_data_aprov_orca, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Data Envio Funcional para aprovação" %>
-    <%= form.date_select :data_envio_funci, id: :improvement_data_envio_funci %>
+    <%= form.date_select :data_envio_funci, id: :improvement_data_envio_funci, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Data Aprovação Funcional" %>
-    <%= form.date_select :data_aprov_funci, id: :improvement_data_aprov_funci %>
+    <%= form.date_select :data_aprov_funci, id: :improvement_data_aprov_funci, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Data Envio Técnica para aprovação" %>
-    <%= form.date_select :data_envio_tec, id: :improvement_data_envio_tec %>
+    <%= form.date_select :data_envio_tec, id: :improvement_data_envio_tec, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Data Aprovação Técnica" %>
-    <%= form.date_select :data_aprov_tec, id: :improvement_data_aprov_tec %>
+    <%= form.date_select :data_aprov_tec, id: :improvement_data_aprov_tec, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Data Fim Contrução" %>
-    <%= form.date_select :data_fim_constr, id: :improvement_data_fim_constr %>
+    <%= form.date_select :data_fim_constr, id: :improvement_data_fim_constr, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Data de teste de Aceite" %>
-    <%= form.date_select :data_teste_acei, id: :improvement_data_teste_acei %>
+    <%= form.date_select :data_teste_acei, id: :improvement_data_teste_acei, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Data de passagem a produção" %>
-    <%= form.date_select :data_prod, id: :improvement_data_prod %>
+    <%= form.date_select :data_prod, id: :improvement_data_prod, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "% de Avanço" %>
-    <%= form.number_field :avanco, id: :improvement_avanco %>
+    <%= form.number_field :avanco, id: :improvement_avanco, class: "form-control" %>
   </div>
 
 
-  <div class="field">
+  <div class="form-group">
       <%= form.label 'Sistema' %>
       <%= collection_select(:improvement, :system_id, System.all, :id, :name) %>
       
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label 'Módulo' %>
     <%= collection_select(:improvement, :segment_id, Segment.all, :id, :name) %>
     
   </div>
 
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Tipo" %>
     <%= collection_select(:improvement, :type_id, Type.all, :id, :name) %>
     
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Prioridade" %>
     <%= collection_select(:improvement, :priority_id, Priority.all, :id, :name) %>
     
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Diretoria" %>
     <%= collection_select(:improvement, :director_id, Director.all, :id, :name) %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Status" %>
     <%= collection_select(:improvement, :status_id, Status.all, :id, :name) %>
     
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Provedor" %>
     <%= collection_select(:improvement, :provider_id, Provider.all, :id, :name) %>
 
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Área" %>
     <%= collection_select(:improvement, :area_id, Area.all, :id, :name) %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Solicitante" %>
     <%= collection_select(:improvement, :requester_id, Requester.all, :id, :name) %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Responsável ICT" %>
     <%= collection_select(:improvement, :responsible_id, Responsible.all, :id, :name) %>
     
@@ -149,3 +152,5 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+</div>
