@@ -4,7 +4,7 @@ class ImprovementsController < ApplicationController
   # GET /improvements
   # GET /improvements.json
   def index
-    @improvements = Improvement.all
+    @improvements = Improvement.all.order("created_at DESC")
   end
 
   # GET /improvements/1

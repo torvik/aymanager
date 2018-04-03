@@ -10,6 +10,13 @@ class HomeController < ApplicationController
     @maiororcamento = Improvement.maximum(:horas_orca)
     @menororcamento = Improvement.minimum(:horas_orca)
 
+    @status = Status.where(name: "Construção")
+    @qtd_horas_const = Improvement.where(status_id: @status ).sum(:horas_orca)
+
+    @status = Status.where(name: "Em Produção")
+    @qtd_horas_prod = Improvement.where(status_id: @status).sum(:horas_orca)
+
+
     @status = Status.where(name: "Definindo escopo")
     @total_ept_defesc = Improvement.where(status_id: @status).count
 
