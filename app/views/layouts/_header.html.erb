@@ -1,47 +1,42 @@
 <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
-            </button>
-            <a class="navbar-brand" href="/">AY Manager</a>
-          </div>
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="/">AY Manager</a>
+            </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
               <li class="active"><a href="/">Home</a></li>
               <li><%= link_to  "EPT´s", improvements_path %></li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Configurações</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <%= link_to  "Diretoria", directors_path %>
-                  <div class="dropdown-divider"></div>
-                  <%= link_to  "Área", areas_path %>
-                  <div class="dropdown-divider"></div>
-                  <%= link_to  "Responsável ICT", responsibles_path %>
-                  <div class="dropdown-divider"></div>
-                  <%= link_to  "Solicitante", requesters_path %>
-                  <div class="dropdown-divider"></div>
-                  <%= link_to  "Provedor", providers_path %>
-                  <div class="dropdown-divider"></div>
-                  <%= link_to  "Status", statuses_path %>
-                  <div class="dropdown-divider"></div>
-                  <%= link_to  "Prioridades", priorities_path %>
-                  <div class="dropdown-divider"></div>
-                  <%= link_to  "Tipos", types_path %>
-                  <div class="dropdown-divider"></div>
-                  <%= link_to  "Sistemas", systems_path %>
-                  <div class="dropdown-divider"></div>
-                  <%= link_to  "Módulos", segments_path %>
-                </div>
+                          
+              <li class='dropdown'>
+
+                  <a href='#' class='dropdown-toggle' data-toggle='dropdown'>Configurações <span class='caret'></span>
+                      <ul class='dropdown-menu'>
+                      <li><%= link_to  "Diretoria", directors_path %></li>
+                      <li><%= link_to  "Área", areas_path %></li>
+                      <li><%= link_to  "Responsável ICT", responsibles_path %></li>
+                      <li><%= link_to  "Solicitante", requesters_path %></li>
+                      <li><%= link_to  "Provedor", providers_path %></li>
+                      <li class='divider'></li>
+                      <li><%= link_to  "Status", statuses_path %></li>
+                      <li><%= link_to  "Prioridades", priorities_path %></li>
+                      <li><%= link_to  "Tipos", types_path %></li>
+                      <li class='divider'></li>
+                      <li><%= link_to  "Sistemas", systems_path %></li>
+                      <li><%= link_to  "Módulos", segments_path %></li>
+                      </ul>
               </li>
             </ul>
+
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
           </div>
         </div>
-      </nav>
+</nav>
         
