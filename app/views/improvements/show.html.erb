@@ -125,5 +125,12 @@
   <%= @improvement.responsible.name %>
 </p>
 
+<p>
+  <strong>Criado por:</strong>
+  <%= @improvement.user.email %>
+</p>
+
+
+
 <%= link_to 'Edit', edit_improvement_path(@improvement) %> |
 <%= link_to 'Back', improvements_path %>

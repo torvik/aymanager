@@ -14,7 +14,7 @@ class ImprovementsController < ApplicationController
 
   # GET /improvements/new
   def new
-    @improvement = Improvement.new
+     @improvement = current_user.improvements.build
   end
 
   # GET /improvements/1/edit
@@ -24,7 +24,7 @@ class ImprovementsController < ApplicationController
   # POST /improvements
   # POST /improvements.json
   def create
-    @improvement = Improvement.new(improvement_params)
+    @improvement = current_user.improvements.build(improvement_params)
 
     respond_to do |format|
       if @improvement.save
