@@ -10,7 +10,6 @@ class Improvement < ApplicationRecord
   belongs_to :requester
   belongs_to :responsible
 
-  has_many :tasks
   belongs_to :user
 
 

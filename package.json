@@ -1,5 +1,7 @@
 {
   "name": "aymanager",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery-circle-progress": "^1.2.2"
+  }
 }

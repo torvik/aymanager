@@ -1,0 +1,305 @@
+<div class="row">
+  <div class="col-lg-12">
+      <h1 class="page-header">
+          Dashboard <small> </small>
+      </h1>
+      <ol class="breadcrumb">
+          <li class="active">
+              <i class="fa fa-dashboard"></i> Relatório de EPT´s por Status 
+          </li>
+      </ol>
+  </div>
+</div>
+<!-- /.row -->
+
+<div id="circle"></div>
+
+<div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div><h4><b>Definindo escopo</h4></b></div>
+            <div class="progress blue">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value"><% if @totalepts == 0  %> 0% <% else %> <%= (@total_ept_defesc*100/@totalepts) %>% <% end %></div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+                <div><h4><b>Aprovação do orçamento</h4></b></div>
+            <div class="progress yellow">
+                
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value"><% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_aprov*100/@totalepts) %>% <% end %></div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+                <div><h4><b>Valorando</h4></b></div>
+                <div class="progress pink">
+                    <span class="progress-left">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value"><% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_valor*100/@totalepts) %>% <% end %></div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                    <div><h4><b>Construção</h4></b></div>
+                    <div class="progress green">
+                        <span class="progress-left">
+                            <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                            <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value"><% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_const*100/@totalepts) %>% <% end %></div>
+                    </div>
+                </div>
+ </div>
+
+ <br/>
+ <br/>
+ <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div><h4><b>Entregue para testes</h4></b></div>
+            <div class="progress yellow">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value"><% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_teste*100/@totalepts) %>% <% end %></div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+                <div><h4><b>Aguardando análise</h4></b></div>
+            <div class="progress blue">
+                
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value"><% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_aguard*100/@totalepts) %>% <% end %></div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+                <div><h4><b>Em produção</h4></b></div>
+                <div class="progress yellow">
+                    <span class="progress-left">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value"><% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_prod*100/@totalepts) %>% <% end %></div>
+                </div>
+            </div>
+ </div>
+
+ <br/>
+ <br/>
+ <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> Dados Gerais
+                </li>
+            </ol>
+        </div>
+      </div>
+
+ <div class="row">
+  <div class="col-lg-3 col-md-6">
+      <div class="panel panel-primary">
+          <div class="panel-heading">
+              <div class="row">
+                  <div class="col-xs-3">
+                      <i class="fa fa-shopping-cart fa-5x"></i>
+                  </div>
+                  <div class="col-xs-9 text-right">
+                      <div class="huge"><%= @totalepts %></div>
+                      <div>Total de EPT´s</div>
+                  </div>
+              </div>
+          </div>
+          <a href="/improvements">
+              <div class="panel-footer">
+                  <span class="pull-left">Mais Detalhes</span>
+                  <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                  <div class="clearfix"></div>
+              </div>
+          </a>
+      </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+      <div class="panel panel-success">
+          <div class="panel-heading">
+              <div class="row">
+                  <div class="col-xs-3">
+                      <i class="fa fa-tasks fa-5x"></i>
+                  </div>
+                  <div class="col-xs-9 text-right">
+                      <div class="huge"><%= @totalhoras  %></div>
+                      <div>Total de Horas Orçadas</div>
+                  </div>
+              </div>
+          </div>
+          <a href="/improvements">
+              <div class="panel-footer">
+                  <span class="pull-left">Mais Detalhes</span>
+                  <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                  <div class="clearfix"></div>
+              </div>
+          </a>
+      </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+      <div class="panel panel-info">
+          <div class="panel-heading">
+              <div class="row">
+                  <div class="col-xs-3">
+                      <i class="fa fa-bar-chart fa-5x"></i>
+                  </div>
+                  <div class="col-xs-9 text-right">
+                      <div class="huge"><%=  @maioravanco %></div>
+                      <div>Maior Avanço</div>
+                  </div>
+              </div>
+          </div>
+          <a href="/improvements">
+              <div class="panel-footer">
+                  <span class="pull-left">Mais Detalhes</span>
+                  <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                  <div class="clearfix"></div>
+              </div>
+          </a>
+      </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+      <div class="panel panel-warning">
+          <div class="panel-heading">
+              <div class="row">
+                  <div class="col-xs-3">
+                      <i class="fa fa-database fa-5x"></i>
+                  </div>
+                  <div class="col-xs-9 text-right">
+                      <div class="huge"><%= @menoravanco %></div>
+                      <div>Menor Avanço</div>
+                  </div>
+              </div>
+          </div>
+          <a href="/improvements">
+              <div class="panel-footer">
+                  <span class="pull-left">Mais Detalhes</span>
+                  <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                  <div class="clearfix"></div>
+              </div>
+          </a>
+      </div>
+  </div>
+</div>
+<!-- /.row -->
+<div class="row">
+  <div class="col-lg-3 col-md-6">
+      <div class="panel panel-primary">
+          <div class="panel-heading">
+              <div class="row">
+                  <div class="col-xs-3">
+                      <i class="fa fa-shopping-cart fa-5x"></i>
+                  </div>
+                  <div class="col-xs-9 text-right">
+                      <div class="huge"><%= @maiororcamento %></div>
+                      <div>Maior Orçamento</div>
+                  </div>
+              </div>
+          </div>
+          <a href="/improvements">
+              <div class="panel-footer">
+                  <span class="pull-left">Mais Detalhes</span>
+                  <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                  <div class="clearfix"></div>
+              </div>
+          </a>
+      </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+      <div class="panel panel-success">
+          <div class="panel-heading">
+              <div class="row">
+                  <div class="col-xs-3">
+                      <i class="fa fa-tasks fa-5x"></i>
+                  </div>
+                  <div class="col-xs-9 text-right">
+                      <div class="huge"><%= @menororcamento  %></div>
+                      <div>Menor Orçamento </div>
+                  </div>
+              </div>
+          </div>
+          <a href="/improvements">
+              <div class="panel-footer">
+                  <span class="pull-left">Mais Detalhes</span>
+                  <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                  <div class="clearfix"></div>
+              </div>
+          </a>
+      </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+      <div class="panel panel-info">
+          <div class="panel-heading">
+              <div class="row">
+                  <div class="col-xs-3">
+                      <i class="fa fa-bar-chart fa-5x"></i>
+                  </div>
+                  <div class="col-xs-9 text-right">
+                      <div class="huge"><%=  @qtd_horas_prod %></div>
+                      <div>Total Horas Produção</div>
+                  </div>
+              </div>
+          </div>
+          <a href="/improvements">
+              <div class="panel-footer">
+                  <span class="pull-left">Mais Detalhes</span>
+                  <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                  <div class="clearfix"></div>
+              </div>
+          </a>
+      </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+      <div class="panel panel-warning">
+          <div class="panel-heading">
+              <div class="row">
+                  <div class="col-xs-3">
+                      <i class="fa fa-database fa-5x"></i>
+                  </div>
+                  <div class="col-xs-9 text-right">
+                      <div class="huge"><%= @qtd_horas_const %></div>
+                      <div>Total Horas Construção</div>
+                  </div>
+              </div>
+          </div>
+          <a href="/improvements">
+              <div class="panel-footer">
+                  <span class="pull-left">Mais Detalhes</span>
+                  <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                  <div class="clearfix"></div>
+              </div>
+          </a>
+      </div>
+  </div>
+</div>
+<!-- /.row -->

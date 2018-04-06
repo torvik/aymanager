@@ -9,7 +9,6 @@
       <th>Solicitação</th>
       <th>Orçamento</th>
       <th>Avanço</th>
-      <th>Módulo</th>
       <th>Sistema</th>
       <th>Tipo</th>
       <th>Prioridade</th>
@@ -26,7 +25,6 @@
         <td><%= improvement.solicitacao %></td>
         <td><%= improvement.horas_orca %></td>        
         <td><%= number_to_percentage(improvement.avanco, precision: 0)  %></td>
-        <td><%= improvement.segment.name %></td>
         <td><%= improvement.system.name %></td>
         <td><%= improvement.type.name %></td>
         <td><%= improvement.priority.name %></td>

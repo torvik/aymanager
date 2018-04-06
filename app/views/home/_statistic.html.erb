@@ -1,0 +1,55 @@
+@import "bootstrap";
+
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h4>Relatório de EPT´s por Status </h4></div>
+        <div class="panel-body">
+      
+            <small>Definindo escopo: <%= @total_ept_defesc %> </small>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: <% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_defesc*100/@totalepts) %>% <% end %>" >
+                    <span class="sr-only"><% if @totalepts == 0  %> 0% <% else %> <%= (@total_ept_defesc*100/@totalepts) %> <% end %></span>
+                </div>
+            </div>
+            <small>Aprovação do orçamento: <%= @total_ept_aprov %></small>
+            <div class="progress">
+                <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: <% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_aprov*100/@totalepts) %>% <% end %>">
+                    <span class="sr-only"><% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_aprov*100/@totalepts) %> <% end %></span>
+                </div>
+            </div>
+            <small>Valorando: <%= @total_ept_valor %></small>
+            <div class="progress">
+                <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_valor*100/@totalepts) %>% <% end %>">
+                    <span class="sr-only"><% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_valor*100/@totalepts) %> <% end %></span>
+                </div>
+            </div>
+            <small>Construção: <%= @total_ept_const %></small>
+            <div class="progress">
+                <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: <% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_const*100/@totalepts) %>% <% end %>">
+                    <span class="sr-only"><% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_const*100/@totalepts) %> <% end %></span>
+                </div>
+            </div>
+            <small>Entregue para testes: <%= @total_ept_teste %></small>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: <% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_teste*100/@totalepts) %>% <% end %>">
+                    <span class="sr-only"><% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_teste*100/@totalepts) %> <% end %></span>
+                </div>
+            </div>
+              <small>Aguardando análise: <%= @total_ept_aguard %></small>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: <% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_aguard*100/@totalepts) %>% <% end %>">
+                    <span class="sr-only"><% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_aguard*100/@totalepts) %> <% end %></span>
+                </div>
+            </div>
+            <small>Em produção: <%= @total_ept_prod %></small>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: <% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_prod*100/@totalepts) %>% <% end %>">
+                    <span class="sr-only"><% if @totalepts == 0 %> 0% <% else %> <%= (@total_ept_prod*100/@totalepts) %> <% end %></span>
+                </div>
+            </div>
+      
+      
+        </div>
+        <!--/panel-body-->
+      </div>
+      <!--/panel-->

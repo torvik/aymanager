@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  has_many :tasks 
   has_many :improvements
   
   # Include default devise modules. Others available are:
